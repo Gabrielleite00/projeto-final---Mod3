@@ -1,0 +1,67 @@
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: slategray;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+  
+  .logo-image {
+    width: 60px;
+  }
+  
+  .logo-image:hover{
+    transform: scale(1.2);
+  transition: 1s;
+  }
+  
+  .nav-custom {
+    background-color: rgb(224, 151, 33);
+    padding: 10px;
+  }
+  
+  span {
+    color: White;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+  
+  span:hover {
+    transform: scale(1.2);
+    transition: 1s;
+    color: slategray;
+  }
+  
+  .nav-item a{
+    color: white;
+    margin-right: 30px;
+    text-align: end;
+  }
+  
+  .nav-item a:hover{
+    transform: scale(1.2);
+    color: slategray;
+    transition: 1s;
+  }
+  
+  div li {
+    font-size: 24px;
+    margin-left: 570px;
+  }
+
+
+
+  

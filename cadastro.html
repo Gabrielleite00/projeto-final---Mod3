@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+
+
+    <link rel="stylesheet" href="styleCadastro.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg nav-custom">
+        <div class="container-fluid">
+          <img src="assets/download.png" alt="logo" class="logo-image">
+          <span>DevBurguer</span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto" id="navbar">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Voltar à Página Principal</a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="form-container">
+        <h4>Cadastre um novo Item</h4>
+        <form id="burguerForm" method="post">
+            <div class="form-group">
+                <label for="productName">Nome do Hamburguer</label>
+                <input type="text" class="form-control" id="productName" placeholder="Digite o nome do produto">
+            </div>
+
+            <div class="form-group">
+              <label for="productImage">Imagem do Produto</label>
+              <input type="file" class="form-control" id="productImage" accept="image/*" >
+          </div>
+            <div class="form-group">
+                <label for="category">Categoria</label>
+                <select class="form-control" id="category" >
+                    <option value="alimentos">--- ESCOLHA ---</option>
+                    <option value="alimentos">Alimentos</option>
+                    <option value="alimentos">Bebidas</option>
+                    <option value="alimentos">Sobremesas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Preço</label>
+                <input type="number" class="form-control" id="price" placeholder="Digite o preço" step="0.01" >
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantidade em Estoque</label>
+                <input type="number" class="form-control" id="quantity" placeholder="Digite a quantidade em estoque" >
+            </div>
+            <div class="form-group">
+                <label for="description">Descrição</label>
+                <textarea class="form-control" id="description" rows="4" placeholder="Digite a descrição do produto" ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Cadastrar Produto</button>
+        </form>
+    </div>
+
+</body>
+
+
+
+<script type="module" src="dist/cadastro.js"></script>
+</html>
