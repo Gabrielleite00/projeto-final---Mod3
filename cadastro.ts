@@ -1,6 +1,4 @@
-// src/cadastro.ts
-
-import { IBurguer } from "./models/burguer.js";
+import IBurguer  from "./models/burguer.js";
 
 // Função para converter File em Data URL
 const readFileAsDataURL = (file: File): Promise<string> => {
@@ -59,9 +57,7 @@ const handleFormSubmit = async (event: Event) => {
     const novoBurguer: IBurguer = {
         image: imageDataURL,
         name: nameInput.value.trim(),
-        category: categorySelect.value,
         price: parseFloat(priceInput.value),
-        quantity: parseInt(quantityInput.value, 10),
         description: descriptionTextarea.value.trim(),
     };
 
