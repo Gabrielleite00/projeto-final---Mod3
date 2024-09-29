@@ -1,15 +1,20 @@
-// export default pois vai fazer o import de um elemento único, e não de vários, como seria com o export normal. 
 
-export default class HeaderComponent {
+    // export default pois vai fazer o import de um elemento único, e não de vários, como seria com o export normal. 
+    //headerComponent é a classe responsável por renderizar o header da minha página.
+    export default class HeaderComponent {
+
+    // dentro do meu construtor eu vou tentar localizar o elemento HTML com o id "header", usando o document.getElementById
+    
     constructor() {
         const header = document.getElementById("header");
 
+    // Se este id for encontrado, o conteudo do html vai ser inserido na pagina, retornado pelo método render
     if (header)
         header.innerHTML = this.render();
     }
 
-    //função de retornar o html / manter a CRASE na mesma linha do return, senão dará erro. 
 
+    //função de retornar o html / manter a CRASE na mesma linha do return, senão dará erro. 
     render() {    
         return `  
     <nav class="navbar navbar-expand-lg nav-custom">

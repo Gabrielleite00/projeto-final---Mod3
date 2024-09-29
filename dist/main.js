@@ -1,3 +1,4 @@
+
 import CardComponent from "./components/card.components.js";
 import HeaderComponent from "./components/header.components.js";
 const header = new HeaderComponent();
@@ -39,16 +40,16 @@ const burguerArray = [
         description: "O Stack Overflow é um hambúrguer que garante satisfazer todas as suas necessidades de sabor! Com dois generosos hambúrgueres de carne bovina temperada, coberto com queijo derretido, bacon crocante, com um molho artesanal defumado, este lanche é o verdadeiro top da sua lista! Servido em um pão de brioche macio e acompanhado de anéis de cebola crocantes."
     }
 ];
-//const burguerArray: Array<IBurguer>  | null = localStorage.getItem("pizzaArray")
+
 const burguerJSON = localStorage.getItem("burguerArray");
 let burguerJSONArray = [];
 if (!burguerJSON) {
-    // Se não existir no localStorage, armazenar o array inicial
+
     localStorage.setItem("burguerArray", JSON.stringify(burguerArray));
     burguerJSONArray = burguerArray;
 }
 else {
-    // Parsear o JSON e atribuir ao array
+
     burguerJSONArray = JSON.parse(burguerJSON);
 }
 console.log(burguerArray);

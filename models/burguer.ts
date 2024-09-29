@@ -7,3 +7,4 @@ export default interface IBurguer {
     price: number;
     description: string;
 };
+

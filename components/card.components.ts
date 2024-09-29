@@ -1,15 +1,24 @@
+
+// importando a interface IBurguer, que está definindo a minha estrutura do objeto Burguer
 import IBurguer from "../models/burguer";
 
+
+
+
+// cardComponente vai ser responsável por renderizar o card do hamburguer na minha pagina. 
+// já o construtor vai receber um objeto (novoBurguer) do tipo IBurguer
 export default class CardComponent {
     constructor(novoBurguer: IBurguer) {
         const cardList = document.getElementById("cards-list");
 
         if (cardList) {
-            // Adiciona o novo card (com inner.HTML naõ estava funcionando)
+            // Adiciona o novo card (com inner.HTML naõ estava funcionando, precisei de uma alternativa com o insertAdjacentHTML - https://developer.mozilla.org/pt-BR/docs/Web/API/Element/innerHTML)
             cardList.insertAdjacentHTML('beforeend', this.render(novoBurguer));
         }
     }
 
+    // aqui vai ser onde irá ser criado a estrutura do HTML do card, através do metodo render. Ele vai retornar uma string com o html do card, baseado nas propriedades do novoBurguer
+    //estrutura do card está em bootstrap
     render(novoBurguer: IBurguer) {
         return ` 
         <div class="col-md-6 card-spacing">
